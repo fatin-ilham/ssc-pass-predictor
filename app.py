@@ -10,10 +10,13 @@ st.set_page_config(page_title="SSC Pass Rate Predictor", page_icon="📊", layou
 st.title("📘 SSC Pass Rate Predictor (Bangladesh)")
 st.write("Predict future SSC pass rates using Polynomial Regression!")
 
+data = {
+    'Year': [2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    'Pass_Rate': [35.22, 42.18, 36.85, 58.27, 62.22, 57.37, 72.18, 67.41, 78.19, 82.31, 86.32, 89, 91.34, 87.84, 88.29, 82.35, 77.77, 82.20, 82.87, 83.14, 87.44, 86.39, 83.45, 68.45]
+}
 
 
-
-df = pd.read_csv('https://github.com/fatin-ilham/ssc-pass-predictor/blob/main/SSC%20Result%20Trends%20in%20Bangladesh%20(20012025).csv')
+df = pd.DataFrame(data)
 X = df[['Year']]
 y = df['Pass_Rate']
 
@@ -42,4 +45,5 @@ ax.set_title("SSC Pass Rate Prediction (Polynomial Regression)")
 ax.legend()
 
 st.pyplot(fig)
+
 
