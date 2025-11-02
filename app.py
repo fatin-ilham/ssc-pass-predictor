@@ -45,5 +45,13 @@ ax.set_title("SSC Pass Rate Prediction (Polynomial Regression)")
 ax.legend()
 
 st.pyplot(fig)
+st.sidebar.markdown("---")  
+st.sidebar.header("About the Creator")
+st.sidebar.write("👤 Name: Fatin Ilham")
+st.sidebar.write("📸 Instagram: [@spiritofhonestyy](https://www.instagram.com/spiritofhonestyyy/)")
+st.sidebar.write("📘 Facebook: [Fatin Ilham](https://www.facebook.com/profile.php?id=61572732399921)")
+st.sidebar.write("💻 GitHub: [Fatin's GitHub](https://github.com/fatin-ilham)")
+st.sidebar.write("📧 Email: fatin.ilham@g.bracu.ac.bd")
+
 
 
