@@ -38,9 +38,10 @@ for year, pred in zip(future_years.flatten(), future_predictions):
 fig, ax = plt.subplots(figsize=(8, 5))
 ax.scatter(X, y, color='blue', label='Actual Data')
 ax.plot(X, model.predict(X_poly), color='red', label='Polynomial Fit')
-ax.scatter(future_years, predictions, color='green', label='Predictions')
+ax.scatter(future_years, future_predictions, color='green', label='Predictions')
 ax.set_xlabel("Year")
 ax.set_ylabel("Pass Rate (%)")
 ax.set_title("SSC Pass Rate Prediction (Polynomial Regression)")
 ax.legend()
+
 st.pyplot(fig)
